@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter SaaS Marketing`,
+    title: `Creditamina company site`,
     description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    author: `Creditamina development`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,11 +16,9 @@ module.exports = {
       options: {
         trackingId: process.env.GA_TRACKING_ID || "none",
         // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
+        head: true,
         // Setting this parameter is also optional
-        respectDNT: true,
+        // respectDNT: true,
       },
     },
     {
@@ -41,7 +39,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon.ico`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
