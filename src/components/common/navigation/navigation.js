@@ -15,7 +15,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+const NAV_ITEMS = ["Características", "Paises donde trabajamos"]
 
 export default class Navigation extends Component {
   state = {
@@ -27,7 +27,7 @@ export default class Navigation extends Component {
     window.addEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll = event => {
+  handleScroll = (event) => {
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 32) {
@@ -38,7 +38,9 @@ export default class Navigation extends Component {
   }
 
   toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }))
+    this.setState((prevState) => ({
+      mobileMenuOpen: !prevState.mobileMenuOpen,
+    }))
   }
 
   closeMobileMenu = () => {
@@ -47,7 +49,7 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => (
+  getNavAnchorLink = (item) => (
     <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
@@ -56,12 +58,12 @@ export default class Navigation extends Component {
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map((item) => item.toLowerCase())}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
-        {NAV_ITEMS.map(navItem => (
+        {NAV_ITEMS.map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
@@ -77,7 +79,20 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Finance
+                <img
+                  src="https://storage.googleapis.com/creditamina/logos/creditamina-c-logo.png"
+                  alt="Creditamina icono"
+                  className="logo-icon"
+                  loading="lazy"
+                  style={{ height: "60px", marginRight: "15px" }}
+                />
+                <img
+                  src="https://storage.googleapis.com/creditamina/logos/creditamina-logo.svg"
+                  alt="Creditamina"
+                  className="logo"
+                  loading="lazy"
+                  style={{ height: "30px", marginBottom: "15px" }}
+                />
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -96,7 +111,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>Sign up</button>
+            <span />
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
