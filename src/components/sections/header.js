@@ -30,24 +30,18 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            {/* <Subtitle>Creditamina</Subtitle> */}
             <h1>
-              All your money,
-              <br />
-              one account
+              Recibe las mejores ofertas de préstamos personales en tu país
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              Te ayudamos a obtener el dinero que necesitas desde la comodida de
+              tu casa.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderInput placeholder="Escribe tu correo" />
+              <HeaderButton>Obtener ofertas</HeaderButton>
             </HeaderForm>
-            <FormSubtitle>
-              Already have a beta account?{" "}
-              <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
-            </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
@@ -174,7 +168,7 @@ const HeaderButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
-  background: ${(props) => props.theme.color.secondary};
+  background: rgb(255, 109, 0);
   border-radius: 4px;
   padding: 0px 40px;
   border-width: 0px;

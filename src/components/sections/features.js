@@ -6,8 +6,8 @@ import { Section, Container } from "../global"
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <Subtitle>Características</Subtitle>
+      <SectionTitle>Lo que nos diferencia de otros competidores:</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
@@ -54,7 +54,7 @@ export default Features
 const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
@@ -63,7 +63,7 @@ const SectionTitle = styled.h3`
 
 const Subtitle = styled.h5`
   font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
@@ -76,7 +76,7 @@ const FeaturesGrid = styled.div`
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
   }
@@ -90,7 +90,7 @@ const FeatureItem = styled.div`
 `
 
 const FeatureTitle = styled.h4`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
