@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Creditamina company site`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Creditamina development`,
+    title: `Creditamina`,
+    description: `Sitio oficial de Creditamina.`,
+    author: `Creditamina desarrollo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
