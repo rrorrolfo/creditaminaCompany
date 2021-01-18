@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { Section, Container } from "../global"
 
 const Features = () => (
-  <Section id="features">
+  <Section id="ventajas">
     <StyledContainer>
-      <Subtitle>Características</Subtitle>
+      <Subtitle>Ventajas</Subtitle>
       <SectionTitle>Lo que nos diferencia de otros competidores:</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
