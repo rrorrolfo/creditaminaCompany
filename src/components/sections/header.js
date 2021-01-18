@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container } from "../global"
@@ -63,12 +63,12 @@ const HeaderWrapper = styled.header`
   @media (max-width: ${(props) => props.theme.screen.md}) {
   }
 `
-const Subtitle = styled.h5`
+/* const Subtitle = styled.h5`
   font-size: 16px;
   color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 16px;
-`
+` */
 
 const HeaderTextGroup = styled.div`
   margin: 0;
@@ -116,18 +116,6 @@ const HeaderForm = styled.form`
   @media (max-width: ${(props) => props.theme.screen.sm}) {
     flex-direction: column;
   }
-`
-
-const FormSubtitle = styled.span`
-  ${(props) => props.theme.font_size.xxsmall}
-`
-
-const FormSubtitleLink = styled(Link)`
-  color: ${(props) => props.theme.color.secondary};
-  padding-bottom: 1px;
-  margin-left: 8px;
-  text-decoration: none;
-  border-bottom: 1px solid ${(props) => props.theme.color.secondary};
 `
 
 const HeaderInput = styled.input`
