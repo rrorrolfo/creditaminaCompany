@@ -10,39 +10,18 @@ const Features = () => (
       <SectionTitle>Lo que nos diferencia de otros competidores:</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Rapidez y calidad</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            El servicio más rápido y con la mejor calidad.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
-          <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
-          </FeatureText>
+          <FeatureTitle>Proceso automatizado</FeatureTitle>
+          <FeatureText>100% en línea.</FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
-          <FeatureText>
-            Create smart automated workflows and triggers for your money.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
-          <FeatureText>
-            Easily link up to 5 banks to your finance account.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
-          <FeatureText>
-            High interest and rewards for hitting your goals.
-          </FeatureText>
+          <FeatureTitle>500,000 +</FeatureTitle>
+          <FeatureText>Clientes satisfechos y contando.</FeatureText>
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
@@ -70,9 +49,8 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 670px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
