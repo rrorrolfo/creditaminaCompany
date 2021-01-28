@@ -3,20 +3,59 @@ import styled from "styled-components"
 
 import { Container, Section } from "../global"
 
+const paisesData = [
+  {
+    pais: "México",
+    title: "Préstamos en línea en México",
+    url: "https://creditamina.mx",
+    imageUrl:
+      "https://storage.googleapis.com/creditamina/icons/mexico-bandera.svg",
+  },
+  {
+    pais: "Colombia",
+    title: "Préstamos en línea en Colombia",
+    url: "https://creditamina.co",
+    imageUrl:
+      "https://storage.googleapis.com/creditamina/icons/colombia-bandera.svg",
+  },
+  {
+    pais: "España",
+    title: "Préstamos en línea en España",
+    url: "https://creditamina.es",
+    imageUrl:
+      "https://storage.googleapis.com/creditamina/icons/espana-bandera.svg",
+  },
+]
+
 const GetStarted = () => (
+  <StyledSection id="paises-donde-trabajamos">
+    <GetStartedContainer>
+      <GetStartedTitle>Paises donde trabajamos</GetStartedTitle>
+      <FlagImagesContainer>
+        {paisesData.map((pais) => (
+          <a href={pais.url} title={pais.title}>
+            <FlagImage src={pais.imageUrl} />
+          </a>
+        ))}
+      </FlagImagesContainer>
+    </GetStartedContainer>
+  </StyledSection>
+)
+// Initial component with button
+/* const GetStarted = () => (
   <StyledSection>
     <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
+      <GetStartedTitle>Paises donde trabajamos</GetStartedTitle>
       <TryItButton>Get early access</TryItButton>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>
   </StyledSection>
-)
+) */
 
 export default GetStarted
 
 const StyledSection = styled(Section)`
-  background-color: ${props => props.theme.color.background.light};
+  background-color: ${(props) => props.theme.color.background.light};
   clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
 `
 
@@ -33,7 +72,21 @@ const GetStartedTitle = styled.h3`
   text-align: center;
 `
 
-const TryItButton = styled.button`
+const FlagImagesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  @media (min-width: ${(props) => props.theme.screen.sm}) {
+    flex-direction: row;
+  }
+`
+
+const FlagImage = styled.img`
+  height: 150px;
+`
+
+/* const TryItButton = styled.button`
   font-weight: 500;
   font-size: 14px;
   color: white;
@@ -60,11 +113,12 @@ const TryItButton = styled.button`
   @media (max-width: ${props => props.theme.screen.sm}) {
     margin-left: 0;
   }
-`
+` */
 
-const Subtitle = styled.span`
+/* const Subtitle = styled.span`
   ${props => props.theme.font_size.xxsmall}
   padding-top: 16px;
   font-size: 14px;
   color: ${props => props.theme.color.primary};
 `
+ */
